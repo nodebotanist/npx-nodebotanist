@@ -3,6 +3,9 @@
   "version": "2.0.0",
   "description": "npx nodebotanist",
   "main": "bin/card.js",
+  "bin": {
+    "nodebotanist": "./bin/card.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
