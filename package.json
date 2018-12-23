@@ -2,11 +2,14 @@
   "name": "nodebotanist",
   "version": "2.0.1",
   "description": "npx nodebotanist",
-  "main": "bin/card.js",
+  "main": "/bin/card.js",
   "bin": {
     "nodebotanist": "./bin/card.js"
   },
   "scripts": {
+    "prepublish": "npm run build",
+    "build": "node build.js",
+    "dev": "npm run build && node ./bin/card.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,10 +17,20 @@
     "url": "git+https://github.com/nodebotanist/npx-nodebotanist.git"
   },
   "keywords": [
-    "nodebotanist"
+    "nodebotanist",
+    "card",
+    "npm",
+    "npm card",
+    "npx",
+    "npx card",
+    "business card"
   ],
-  "author": "nodebotanist",
+  "author": "nodebotanist <the@nodebotani.st> (nodebotani.st)",
   "license": "ISC",
+  "files": [
+    "bin/card.js",
+    "bin/output"
+  ],
   "bugs": {
     "url": "https://github.com/nodebotanist/npx-nodebotanist/issues"
   },
@@ -28,9 +41,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
-  },
-  "dependencies": {
+    "eslint-plugin-standard": "^4.0.0",
     "boxen": "^2.1.0",
     "center-align": "^1.0.1",
     "chalk": "^2.4.1"
