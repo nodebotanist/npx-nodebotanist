@@ -14,7 +14,8 @@ const boxenOptions = {
 const newLine = '\n'
 
 const data = {
-  name: 'Kassandra Perch',
+  name: 'Kas Perch',
+  pronouns: 'they/them/their',
   handle: 'nodebotanist',
   work: 'Developer Advocacy Specialst',
   openSource: [
@@ -25,13 +26,20 @@ const data = {
   npm: 'nodebotanist',
   github: 'nodebotanist',
   linkedin: 'nodebotanist',
-  web: 'https://nodebotani.st',
+  web: 'nodebotani.st',
   card: 'nodebotanist'
 }
 
-const output = center([
-  chalk.white.bright(`${data.name} / @${data.handle}`),
-
-])
+const output =
+chalk.white.bold(`           ${data.name} / @${data.handle}`) + newLine +
+chalk.white.bold(`           Pronouns: `) + chalk.green.bold(data.pronouns) + newLine + newLine + 
+chalk.white.bold(`       Work: `) + chalk.green(`${data.work}`) + newLine +
+chalk.white.bold(`Open Source: `) + chalk.green(`${data.openSource.map(project => project).join(newLine + `             `)}`) + newLine +
+chalk.blue.bold(`    Twitter: `) + chalk.gray(`https://twitter.com/`) + chalk.blue(data.twitter) + newLine +
+chalk.red.bold(`        npm: `) + chalk.gray(`https://npmjs.org/`) + chalk.red(data.npm) + newLine +
+chalk.green.bold(`     GitHub: `) + chalk.gray('https://github.com/') + chalk.green(data.github) + newLine +
+chalk.blue.bold(`   LinkedIn: `) + chalk.gray(`https://linkedin.com/@/`) + chalk.blue(data.linkedin) + newLine +
+chalk.magenta.bold(`        Web: `) + chalk.gray(`https://`) + chalk.magenta(data.web) + newLine + newLine +
+chalk.white.bold(`       Card: `) + chalk.white(`npx ${data.card}`) + newLine
 
 fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.green(boxen(output, boxenOptions)))
