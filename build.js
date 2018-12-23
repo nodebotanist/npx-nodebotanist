@@ -17,7 +17,7 @@ const data = {
   name: 'Kas Perch',
   pronouns: 'they/them/their',
   handle: 'nodebotanist',
-  work: 'Developer Advocacy Specialst',
+  work: 'Developer Advocacy Specialist',
   openSource: [
     'Tessel Open Source Committee',
     'Node.JS Hardware Working Group'
@@ -38,8 +38,9 @@ chalk.white.bold(`Open Source: `) + chalk.green(`${data.openSource.map(project =
 chalk.blue.bold(`    Twitter: `) + chalk.gray(`https://twitter.com/`) + chalk.blue(data.twitter) + newLine +
 chalk.red.bold(`        npm: `) + chalk.gray(`https://npmjs.org/`) + chalk.red(data.npm) + newLine +
 chalk.green.bold(`     GitHub: `) + chalk.gray('https://github.com/') + chalk.green(data.github) + newLine +
+chalk.magenta.bold(`     Twitch: `) + chalk.gray('https://twitch.tv/') + chalk.magenta('nodebotanist') + newLine +
 chalk.blue.bold(`   LinkedIn: `) + chalk.gray(`https://linkedin.com/@/`) + chalk.blue(data.linkedin) + newLine +
-chalk.magenta.bold(`        Web: `) + chalk.gray(`https://`) + chalk.magenta(data.web) + newLine + newLine +
+chalk.yellow.bold(`        Web: `) + chalk.gray(`https://`) + chalk.yellow(data.web) + newLine + newLine +
 chalk.white.bold(`       Card: `) + chalk.white(`npx ${data.card}`) + newLine
 
 fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.green(boxen(output, boxenOptions)))
