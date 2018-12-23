@@ -1,6 +1,6 @@
 {
   "name": "nodebotanist",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "npx nodebotanist",
   "main": "/bin/card.js",
   "bin": {
