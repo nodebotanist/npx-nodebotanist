@@ -31,8 +31,8 @@ const data = {
 }
 
 const output =
-chalk.white.bold(`           🏳️‍🌈 ${data.name} / @${data.handle} 🏳️‍🌈`) + newLine +
-chalk.white.bold(`           Pronouns: `) + chalk.green.bold(`✨ ` + data.pronouns + ` ✨`) + newLine + newLine + 
+chalk.white.bold(`             ${data.name} / @${data.handle}`) + newLine +
+chalk.white.bold(`          Pronouns: `) + chalk.green.bold(`✨ ` + data.pronouns + ` ✨`) + newLine + newLine + 
 chalk.white.bold(`       Work 💼: `) + chalk.green(`${data.work}`) + newLine +
 chalk.white.bold(`Open Source: `) + chalk.green(`${data.openSource.map(project => project).join(newLine + `             `)}`) + newLine +
 chalk.blue.bold(`    Twitter 🐦: `) + chalk.gray(`https://twitter.com/`) + chalk.blue(data.twitter) + newLine +
